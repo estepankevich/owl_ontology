@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.stepankevich.xyz/real-estate"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.stepankevich.xyz/real-estate">
+    <Prefix name="" IRI="http://www.stepankevich.xyz/real-estate"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#ByCountry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndPropertyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndPropertyTypeAndSearchType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndSearchType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndSearchTypeAndLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndSearchTypeAndPropertyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByCountryAndSearchTypeAndPropertyTypeAndLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ByPropertyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BySearchType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PropertyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPropertyType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSearchType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AcheterUneMaisonEnItalie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Appartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Buy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuyCastleInFrance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuyInFrance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Castle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#English"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#French"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#House"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Land"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rent"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#SearchProperty"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ByCountry"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SearchProperty"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasCountry"/>
+                <Class IRI="#Country"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndLanguage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountry"/>
+            <Class IRI="#ByLanguage"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndPropertyType"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountry"/>
+            <Class IRI="#ByPropertyType"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndPropertyTypeAndSearchType"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountryAndPropertyType"/>
+            <Class IRI="#BySearchType"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndSearchType"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountry"/>
+            <Class IRI="#BySearchType"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndSearchTypeAndLanguage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountryAndSearchType"/>
+            <Class IRI="#ByLanguage"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndSearchTypeAndPropertyType"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountryAndSearchType"/>
+            <Class IRI="#ByPropertyType"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByCountryAndSearchTypeAndPropertyTypeAndLanguage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ByCountryAndSearchTypeAndPropertyType"/>
+            <Class IRI="#ByLanguage"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByLanguage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SearchProperty"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasLanguage"/>
+                <Class IRI="#Language"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ByPropertyType"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SearchProperty"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPropertyType"/>
+                <Class IRI="#PropertyType"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BySearchType"/>
+        <Class IRI="#SearchProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BySearchType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSearchType"/>
+            <Class IRI="#SearchType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Country"/>
+        <Class IRI="#Language"/>
+        <Class IRI="#PropertyType"/>
+        <Class IRI="#SearchProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Country"/>
+        <Class IRI="#PropertyType"/>
+        <Class IRI="#SearchProperty"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#PropertyType"/>
+        <NamedIndividual IRI="#Appartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchType"/>
+        <NamedIndividual IRI="#Buy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchProperty"/>
+        <NamedIndividual IRI="#BuyInFrance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PropertyType"/>
+        <NamedIndividual IRI="#Castle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Language"/>
+        <NamedIndividual IRI="#English"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Language"/>
+        <NamedIndividual IRI="#French"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PropertyType"/>
+        <NamedIndividual IRI="#House"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PropertyType"/>
+        <NamedIndividual IRI="#Land"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchType"/>
+        <NamedIndividual IRI="#Rent"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCountry"/>
+        <NamedIndividual IRI="#AcheterUneMaisonEnItalie"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <NamedIndividual IRI="#AcheterUneMaisonEnItalie"/>
+        <NamedIndividual IRI="#French"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPropertyType"/>
+        <NamedIndividual IRI="#AcheterUneMaisonEnItalie"/>
+        <NamedIndividual IRI="#House"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSearchType"/>
+        <NamedIndividual IRI="#AcheterUneMaisonEnItalie"/>
+        <NamedIndividual IRI="#Buy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCountry"/>
+        <NamedIndividual IRI="#BuyCastleInFrance"/>
+        <NamedIndividual IRI="#France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <NamedIndividual IRI="#BuyCastleInFrance"/>
+        <NamedIndividual IRI="#French"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSearchType"/>
+        <NamedIndividual IRI="#BuyCastleInFrance"/>
+        <NamedIndividual IRI="#Buy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCountry"/>
+        <NamedIndividual IRI="#BuyInFrance"/>
+        <NamedIndividual IRI="#France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <NamedIndividual IRI="#BuyInFrance"/>
+        <NamedIndividual IRI="#French"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSearchType"/>
+        <NamedIndividual IRI="#BuyInFrance"/>
+        <NamedIndividual IRI="#Buy"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCountry"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPropertyType"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasCountry"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasLanguage"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPropertyType"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSearchType"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCountry"/>
+        <Class IRI="#SearchProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <Class IRI="#SearchProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPropertyType"/>
+        <Class IRI="#SearchProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSearchType"/>
+        <Class IRI="#SearchProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCountry"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <Class IRI="#Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPropertyType"/>
+        <Class IRI="#PropertyType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSearchType"/>
+        <Class IRI="#SearchType"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
